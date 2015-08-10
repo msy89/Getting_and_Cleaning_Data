@@ -23,7 +23,8 @@ tidy=rbind(test,train);
 #Labelling the data set with descriptive variable names.
 names(tidy)[1:length(features)]=features
 #Subsetting 'tidy'dataset extracting only the measurements on the mean and standard deviation for each measurement.
-tidy=tidy[,c((ncol(tidy)-1),ncol(tidy),grep('mean',names(tidy)),grep('std',names(tidy)))]
+tidy=tidy[,c((ncol(tidy)-1),ncol(tidy),grep('mean()',names(tidy)),grep('std()',names(tidy)))]
+tidy=tidy[,grep('Freq',names(tidy),invert=T)]
 #Labelling 'activity' variable with activity labels
 activity=rep(NA,nrow(tidy))
 for(i in 1:nrow(labels)){
