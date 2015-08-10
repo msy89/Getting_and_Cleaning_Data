@@ -41,5 +41,3 @@ final[6*(j-1)+i,2]=labels[i,2]
 }
 #Saving the 'final' dataset in a .txt file
 write.table(final,'final.txt',row.names=F)
-#Saving the 'final' dataset in a .csv file
-write.csv(final,'final.csv',row.names=F)
