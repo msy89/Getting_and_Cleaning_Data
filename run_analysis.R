@@ -19,7 +19,7 @@ trind=read.table("subject_train.txt",h=F)
 tract=read.table("y_train.txt",h=F)
 train$subject=trind[,1];train$activity=tract[,1]
 #Merging 'test' and 'train' datasets in 'tidy' dataset
-tidy=rbind(test,train);
+tidy=rbind(test,train)
 #Labelling the data set with descriptive variable names.
 names(tidy)[1:length(features)]=features
 #Subsetting 'tidy'dataset extracting only the measurements on the mean and standard deviation for each measurement.
