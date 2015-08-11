@@ -26,5 +26,5 @@ For example,the first row of the tidy data contains the mean of each of the 66-f
 This repository includes the following files:
 
 - 'README.md'
-
-- 'CodeBook.md' Shows information about the variables in the tidy data: the subjects involved in the experiments, the activities performed and the variables used on the feature vector.
+- 'CodeBook.md': Shows information about the variables in the tidy data: the subjects involved in the experiments, the activities performed and the variables used on the feature vector.
+- 'run_analysis.R': Script for obtain the tidy data.
