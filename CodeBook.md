@@ -62,10 +62,10 @@ These signals were used to estimate variables of the feature vector for each pat
 The set of variables that were estimated from these signals are: 
 
 - mean: 
-Mean value of the feature variable
+Mean value of the feature variable.
 
 - std: 
-Standard deviation
+Standard deviation of the feature variable.
 
 
 The resulting 66 feature variables are the following:
