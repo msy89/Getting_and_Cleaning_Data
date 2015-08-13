@@ -1,6 +1,6 @@
 #Setting work directory
 setwd('C:/Users/Martin/Downloads/UCI HAR Dataset')
-#Preparing descriptive variable names
+#Preparing feature variable names
 features=read.table("features.txt",h=F)
 features=as.character(features[,2])
 #You must note that some variable names have the error
@@ -33,7 +33,7 @@ names(tidy)[1:length(features)]=features
 #the mean and standard deviation for each measurement.
 tidy=tidy[,c((ncol(tidy)-1),ncol(tidy),grep('mean()',names(tidy)),grep('std()',names(tidy)))]
 tidy=tidy[,grep('Freq',names(tidy),invert=T)]
-#Correcting the names of the features
+#Preparing descriptive variable names
 for(i in 3:ncol(tidy)){
 names(tidy)[i]=sub('..','',make.names(names(tidy)[i]),fixed=T)
 }
