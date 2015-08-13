@@ -55,7 +55,7 @@ final[6*(j-1)+i,2]=labels[i,2]
 #Saving the 'final' dataset in a .txt file
 write.table(final,'final.txt',row.names=F)
 
-##Please only run the code below if you want to have a better visualisation of the tidy data#################
+##Please only run the code below if you want to see the tidy data into R into their readMe#################
 ####################################################################################################
 address="https://s3.amazonaws.com/coursera-uploads/user-71404fce0a73801a55083cb2/975115/asst-3/aa0b9a40417e11e59260092beb391fd2.txt"
 address=sub("^https", "http", address)
