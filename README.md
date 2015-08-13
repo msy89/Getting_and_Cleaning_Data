@@ -16,7 +16,7 @@ From the 561-feature vector we make a new data set by extracting the measurement
 
 Finally, we generate a tidy data set with the average of each variable for each activity and each subject.
 
-For each row of the tidy data it is provided:
+For each row of the tidy data it is provided (see CodeBook.md for detailed description):
 
 - Triaxial acceleration from the accelerometer (total acceleration) and the estimated body acceleration.
 - Triaxial Angular velocity from the gyroscope. 
