@@ -2,7 +2,7 @@ The raw data for this project comes from experiments that have been carried out 
 
 The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain.
 
-For effects of this project, the training and the test sets are merged to create one data set.
+For effects of this project, the training and the test sets are merged to create one data set. 
 
 Each record of the merged data have the next set of variables:
 
