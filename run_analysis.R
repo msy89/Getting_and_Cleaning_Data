@@ -3,6 +3,13 @@ setwd('C:/Users/Martin/Downloads/UCI HAR Dataset')
 #Preparing descriptive variable names
 features=read.table("features.txt",h=F)
 features=as.character(features[,2])
+#You must note that some variable names have the error
+#that the word 'Body' repeats 2 times. We correct that
+#with the following:
+for(i in grep('BodyBody',features)){
+a=unlist(strsplit(features[grep('BodyBody',features)][i],'Body'))
+features[i]=paste(a[1],'Body',a[3],sep='')
+}
 #Preparing activity labels
 labels=read.table("activity_labels.txt",h=F)
 labels[,2]=as.character(labels[,2])
@@ -22,9 +29,14 @@ train$subject=trind[,1];train$activity=tract[,1]
 tidy=rbind(test,train)
 #Labelling the data set with descriptive variable names.
 names(tidy)[1:length(features)]=features
-#Subsetting 'tidy'dataset extracting only the measurements on the mean and standard deviation for each measurement.
+#Subsetting 'tidy' dataset extracting only the measurements on 
+#the mean and standard deviation for each measurement.
 tidy=tidy[,c((ncol(tidy)-1),ncol(tidy),grep('mean()',names(tidy)),grep('std()',names(tidy)))]
 tidy=tidy[,grep('Freq',names(tidy),invert=T)]
+#Correcting the names of the features
+for(i in 3:ncol(tidy)){
+names(tidy)[i]=sub('..','',make.names(names(tidy)[i]),fixed=T)
+}
 #Labelling 'activity' variable with activity labels
 activity=rep(NA,nrow(tidy))
 for(i in 1:nrow(labels)){
